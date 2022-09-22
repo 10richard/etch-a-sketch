@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 #grid {
     display: grid;
     height: 500px;
@@ -12,4 +16,34 @@
 .grid-item {
     border-style: solid;
     border-width: 1px;
+    border-color: black;
+    background-color: white;
+}
+
+.grid-item.black {
+    background-color: black;
+}
+
+.sketch-container {
+    display: flex;
+    justify-content: center;
+    margin: 150px 0;
+}
+
+.settings {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.btn {
+    margin: 20px 0;
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.grid-container {
+    margin: 0 -100px 0 200px;
 }
