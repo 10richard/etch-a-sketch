@@ -15,13 +15,10 @@ function createDefaultGrid() {
         const gridSquare = document.createElement('div');
         gridSquare.classList.add('grid-item');
         grid.appendChild(gridSquare);
+        gridSquare.addEventListener('mouseover', () => {
+            gridSquare.classList.add('black');
+        });
     }
-}
-
-function checkHover(gridItem) {
-    gridItem.addEventListener('click', () => {
-        gridItem.classList.add = ("black");
-    });
 }
 
 function changeRainbow() {
@@ -29,7 +26,10 @@ function changeRainbow() {
 }
 
 function clearGrid() {
-
+    const gridSquares = document.querySelectorAll('.grid-item');
+    gridSquares.forEach(gridSquare => {
+        gridSquare.classList.remove('black', 'rainbow');
+    });
 }
 
 function changeGrid() {
