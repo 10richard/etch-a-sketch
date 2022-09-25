@@ -2,48 +2,69 @@
     box-sizing: border-box;
 }
 
-#grid {
-    display: grid;
-    height: 500px;
-    width: 500px;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    border: 5px;
-    border-style: solid;
-    border-width: 5px;
+.header {
+    text-align: center;
 }
 
-.grid-item {
-    border-style: solid;
-    border-width: 1px;
-    border-color: black;
-    background-color: white;
+.mode {
+    text-align: center;
+    font-size: 18px;
+    font-family: monospace;
+    color: rgb(250, 0, 0);
 }
 
-.grid-item.black {
-    background-color: black;
+.mode.active {
+    color: rgb(0, 250, 0);
 }
 
-.sketch-container {
+.sketchContainer {
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin: 150px 0;
+    margin:  100px 0;
 }
 
 .settings {
+    height: 350px;
+    width: 200px;
     display: flex;
-    justify-content: center;
     flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
-.btn {
-    margin: 20px 0;
-    width: 150px;
-    height: 40px;
-    font-size: 18px;
-    font-family: sans-serif;
+.gridContainer {
+    display: grid;
+    width: 500px;
+    height: 500px;
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+    margin: 0 100px;
+    box-shadow: 0 1px 10px 1px black;
 }
 
-.grid-container {
-    margin: 0 -100px 0 200px;
+.gridItem {
+    background-color: white;
+}
+
+.gridItem.black {
+    background-color: black;
+}
+
+.currentGridSize {
+    text-align: center;
+}
+
+.changeGridContainer {
+    display: flex;
+}
+
+#inputGridVal {
+    width: 120px;
+    margin: 0 30px 0 0;
+}
+
+.gridMessage {
+    text-align: center;
+    font-size: 16px;
 }
